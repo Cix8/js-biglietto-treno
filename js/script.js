@@ -27,9 +27,10 @@ const priceSimple = finalPrice.toFixed(2)
 let message;
 
 if (finalPrice === priceKm) {
-    message = `Il tuo biglietto costa: € ${priceSimple}`
+    message = `<h1>Il tuo biglietto costa: € ${priceSimple}</h1>`
 } else {
-    message = `Il tuo biglietto costa: € ${priceSimple} (è stata applicata una tariffa speciale in base alla tua età!)`
+    message = `<h1>Il tuo biglietto costa: € ${priceSimple}</h1> 
+    <p>(è stata applicata una tariffa speciale in base alla tua età!)</p>`
 }
 
 document.getElementById('ticket-price').innerHTML = message
