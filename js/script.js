@@ -22,13 +22,14 @@ if (userAge < 18) {
 
 const finalPrice = priceKm - discount
 console.log(finalPrice);
+const priceSimple = finalPrice.toFixed(2)
 
 let message;
 
 if (finalPrice === priceKm) {
-    message = `Il tuo biglietto costa: € ${finalPrice}`
+    message = `Il tuo biglietto costa: € ${priceSimple}`
 } else {
-    message = `Il tuo biglietto costa: € ${finalPrice} (è stata applicata una tariffa speciale in base alla tua età!)`
+    message = `Il tuo biglietto costa: € ${priceSimple} (è stata applicata una tariffa speciale in base alla tua età!)`
 }
 
 document.getElementById('ticket-price').innerHTML = message
